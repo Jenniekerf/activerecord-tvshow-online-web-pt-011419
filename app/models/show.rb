@@ -8,7 +8,7 @@ class Show < ActiveRecord::Base
  
  def self.most_popular_show
    #binding.pry
-   Show.where("rating = ?", self.highest_rating)
+   Show.where("rating = ?", self.highest_rating).first
  end 
  
  def self.lowest_rating
